@@ -1,0 +1,63 @@
+
+class gbl{
+    var name = "hello"
+    fun display(){
+        println(name)
+    }
+}
+
+fun main(args: Array<String>) {
+    var a = 40
+    //print(a)
+    var `try` = 20
+    print(`try`) 
+    //
+    val b = 30
+     b = 20
+    print(b)
+    //
+    var a = 40
+    var b: String 
+    print(a)
+    //
+   var msg = "hello"
+    print(msg)
+    
+   val Gbl = gbl()
+   gbl.display()
+}
+
+// 20/08/2024
+
+fun main(){
+   val a= 10
+    val b= 20
+    val result = "sum of $a and $b id ${a+b}"
+    println(result); 
+
+     val letter: Char
+    letter = 'A'
+        print('$letter')
+        print('\n')
+        print('\$')
+        print('\\')
+   var gem = """
+        tej
+            tej
+                tej
+                    tej
+                        tej
+    """
+    print(gem)
+    var gem = """
+            tej
+        tej    tej
+            tej
+    """
+    print(gem)
+
+    val num = arrayOf(1,2,3,4,5)
+    val words: Array<String> = arrayOf("tej","is","learning","kotlin")
+    println(num)
+    println(words)
+}
