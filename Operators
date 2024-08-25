@@ -1,0 +1,88 @@
+fun main() {
+    var a = 10
+    var b = 2
+    // arthematic operators
+    val sum  = a+b
+    println("sum of $a and $b is $sum")
+    println("subtraction of $a and $b is ${b-a}")
+    println("multiplication of $a and $b is ${a*b}")
+    println("division of $a and $b is ${a/b}")
+
+    // relational operators
+    println(" is $a is grater than $b : ${a>b}")
+    println(" is $a is less than $b : ${a<b}")
+    println(" is $a is grater than or equalto $b : ${a>=b}")
+    println(" is $a is less than or equalto $b : ${a<=b}")
+    println(" is $a is  equalto $b : ${a==b}")
+    println(" is $a not equal to $b : ${a!=b}")
+
+    //assignment operators
+    var c=30
+    println("c = $c")
+    c += 5
+    println(" c += 5  ---> $c ")
+    c -= 5
+    println("c -= 5 ---> $c")
+    c *= 5
+    println("c *= 5 ---> $c")
+    c /= 5
+    println("c /= 5 ---> $c")
+    c %= 5
+    println("c %= 5 ---> $c")
+
+    // unary operators
+    var d = 15
+    d = +d
+    println ("+d ---> $d")
+    d = -d
+    println("-d ---> $d")
+    d = 15
+    d = ++d
+    println("++d ---> $d")
+    d = --d
+    println("--d ---> $d")
+    var e = false
+    e = !e
+    println ("!e ---> $e")
+
+    //Logical Operators
+    val and = (a>b) && (a != b)
+    println("(a>b) && (a != b) ---> $and")
+    val or = (a>b) || (a != b)
+    println("(a>b) || (a != b) ---> $or")
+    var flag = true
+    val not = !flag
+    println(" !flag ---> $not") 
+
+    // bitwise operators
+    var s = a.shl(b)
+    println("a.shl(b) ---> $s")
+    s = a.shr(b)
+    println("a.shr(b) ---> $s")
+    s = a.ushr(b)
+    println("a.ushr(b) ---> $s")
+    s = a.and(b)
+    println("a.and(b) ---> $s ")
+    s = a.or(b)
+    println("a.or(b) ---> $s")
+    s = a.xor(b)
+    println("a.xor(b) ---> $s")
+    s = a.inv()
+    println("a.inv() ---> $s")
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
