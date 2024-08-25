@@ -1,4 +1,3 @@
-
 class gbl{
     var name = "hello"
     fun display(){
