@@ -1,0 +1,87 @@
+import java.time.MonthDay
+
+fun main(){
+    // is else else if statements
+   val tem = 25
+    if(tem > 20){
+        println("its a warm day")
+    }
+    val age = 19
+    if (age > 18){
+        println("you are an adult")
+    }
+    else
+        println("you are not an adult")
+    // grade calculation
+    var score = 75
+    if ( score >= 90){
+        println(" you are in A grade")
+    }
+    else if (score >= 85) {
+        println(" you are in B grade")
+    }
+    else if (score >= 70 ){
+        println(" you are in C grade")
+    }
+    else
+        println(" you are in  D grade")
+
+    var a = 10
+    var b = 2
+    var operator = "*"
+    if (operator == "+"){
+        println("ans ---> ${a+b}")
+    }
+    else if (operator == "-"){
+        println("ans ---> ${a-b}")
+    }
+    else if (operator == "*"){
+        println("ans ---> ${a*b}")
+    }
+    else if (operator == "/"){
+        if (b!=0) {
+            println("ans ---> ${a / b}")
+        }
+        else{
+            println("Error: Division by zero")
+        }
+
+    }
+    else{
+        println("Error: Unsupported operator")
+    }
+
+   var age1 = 15
+    if(age1<13){
+        println("you are  an child")
+    }
+    else if(age1 in 13..19){
+        println("you are  an teenager")
+
+    }
+    else {
+        println("you are an adult")
+    }
+
+    var dayNum = 4
+    val dayname = when(dayNum ){
+        1-> "Monday"
+        2-> "Tuesday"
+        3-> "Wednesday"
+        4-> "Thursday"
+        5-> "Friday"
+        6-> "Saturday"
+        7-> "Sunday"
+        else -> "Invalid day"
+    }
+    println("Day of the week: $dayname")
+    // when as statement
+    val num1 = 8
+    when{
+        num1%2 == 0 -> println("$num1 is even")
+        num1%2 != 0 -> println("$num1 is odd")
+    }
+
+
+
+}
