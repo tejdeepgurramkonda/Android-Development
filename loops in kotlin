@@ -1,0 +1,53 @@
+fun demo(){
+    println("Hello,World!")
+
+}
+fun main(){
+    for (i in 1..5){
+        println(i)
+
+    }
+    for (i in 1 until 5){
+        println("number: $i")
+
+    }
+    // using downto to print in reverse order
+    for (i in 5 downTo 1){
+        println(i)
+
+    }
+    // using downTo with step to skip the numbers in between
+    for (i in 5 downTo 1 step 2){
+        println(i)
+
+    }
+
+    val fruits = listOf("apple","orange","cherry")
+    for (fruit in fruits){
+        println(fruit)
+    }
+    val fruits = listOf("apple","orange","cherry")
+    for (index in fruits.indices){
+        println("Fruit: ${fruits[index]}  and its index: $index")
+    }
+    // while loop
+    var i = 5
+    while(i>0){
+        println(i)
+        i--
+    }
+    var j = 5
+    do{
+        println("value is: $j")
+        j--
+    }
+    while (j > 0)
+    var h = 1
+    do{
+        println(h)
+        h++
+    }
+    while(h <= 5) 
+    demo()
+}
+
