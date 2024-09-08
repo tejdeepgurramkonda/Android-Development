@@ -1,0 +1,41 @@
+// sample of getting discount based on membership
+fun main(){
+    println("What is total value of purchase?")
+    var op = Integer.valueOf(readLine())
+    if(op > 1000){
+        println("do you have membership?")
+        var mem = readLine()
+        if(mem == "true"){
+            println("you get 20% discount")
+
+        }
+        else{
+            println("you get 10% discount")
+        }
+    }
+    else{
+        println("no discount")
+    }
+}
+// withdraw amount from bank account
+fun main(){
+    print("What was your current balance")
+    var totBal=readln().toInt()
+    var i="yes"
+    var curr=totBal
+    while(i=="yes"){
+        if(curr<=totBal){
+            println("Do you want to withdraw");
+            var response= readln().toString()
+            if(response=="yes"){
+                print("how much you need to withdrw")
+                var amount = readln().toInt()
+                curr=curr-amount
+                println("Your current balance is $curr")
+            }
+        } else {
+            i == "no"
+            break
+        }
+    }
+}
