@@ -1,0 +1,203 @@
+### XML CODE
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select the Fields"
+        android:textSize="25dp"
+        android:gravity="center"
+        >
+    </TextView>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="699dp"
+        android:background="#F18425"
+        android:columnCount="3"
+        android:orientation="vertical"
+        android:rowCount="3"
+
+        >
+
+        <ImageButton
+            android:id="@+id/btn"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_row="0"
+            android:layout_rowWeight="1"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/img"
+            />
+
+        <ImageButton
+            android:id="@+id/btn2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_row="0"
+            android:layout_rowWeight="1"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/img_1" />
+
+        <ImageButton
+            android:id="@+id/btn3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_row="0"
+            android:layout_rowWeight="1"
+            android:layout_column="2"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/img_2" />
+
+        <ImageButton
+            android:id="@+id/btn4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_row="1"
+            android:layout_rowWeight="1"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/img_3" />
+
+        <ImageButton
+            android:id="@+id/btn5"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_row="1"
+            android:layout_rowWeight="1"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/img_4" />
+
+        <ImageButton
+            android:id="@+id/btn6"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_row="1"
+            android:layout_rowWeight="1"
+            android:layout_column="2"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/img_5" />
+
+        <ImageButton
+            android:id="@+id/btn7"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_row="2"
+            android:layout_rowWeight="1"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/img_6" />
+
+        <ImageButton
+            android:id="@+id/btn8"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_row="2"
+            android:layout_rowWeight="1"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/img_7" />
+
+        <ImageButton
+            android:id="@+id/btn9"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_row="2"
+            android:layout_rowWeight="1"
+            android:layout_column="2"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/img_8" />
+    </GridLayout>
+</LinearLayout>
+ ### SECOND ACTIVITY FOR USING INTENT FOR CHANGING THE PAGE
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="welcome to flipkart"
+        android:textAlignment="center"
+        android:textStyle="bold" />
+</LinearLayout>
+
+### KOTLIN CODE
+package com.example.myapplication
+
+import android.content.Intent
+import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
+import android.widget.ImageView
+import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import com.example.flipkartloginpage.R
+
+class MainActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
+        setContentView(R.layout.activity_main)
+        var a = findViewById<EditText>(R.id.usernameEditText)
+        var b = findViewById<EditText>(R.id.passwordEditText)
+        var c = findViewById<Button>(R.id.loginButton)
+        var d = findViewById<ImageView>(R.id.logoImageView)
+//        val btn = findViewById<Button>(R.id.loginButton)
+        c.setOnClickListener{
+            var i = Intent(this,MainActivity::class.java)
+            startActivity(i)
+        }
+    }
+
+}
+ ### SECOND ACTIVITY FOR USING INTENT FOR CHANGING THE PAGE
+package com.example.flipkartloginpage
+
+import android.os.Bundle
+import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+
+class welcome : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
+        setContentView(R.layout.activity_welcome)
+
+    }
+}
