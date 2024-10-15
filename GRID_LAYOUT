@@ -1,0 +1,108 @@
+// XML CODE
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:columnCount="2"
+    android:rowCount="4">
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="195dp"
+        android:layout_height="143dp"
+        android:layout_row="0"
+        android:layout_column="0"
+        android:scaleType="fitXY"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="215dp"
+        android:layout_height="145dp"
+        android:layout_row="0"
+        android:layout_column="1"
+        android:scaleType="fitXY"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="203dp"
+        android:layout_height="160dp"
+        android:layout_row="1"
+        android:layout_column="0"
+        android:scaleType="fitXY"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="207dp"
+        android:layout_height="165dp"
+        android:layout_row="1"
+        android:layout_column="1"
+        android:scaleType="fitXY"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="2"
+        android:layout_column="0"
+        android:scaleType="fitXY"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="2"
+        android:layout_column="1"
+        android:scaleType="fitXY"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="3"
+        android:layout_column="0"
+        android:scaleType="fitXY"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageButton
+        android:id="@+id/imageButton5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="3"
+        android:layout_column="1"
+        android:scaleType="fitXY"
+        tools:srcCompat="@tools:sample/avatars" />
+
+</GridLayout>
+
+### KOTLIN CODE
+
+package com.example.creatingloginpage
+
+import android.os.Bundle
+import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+
+class GridLayout : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
+        setContentView(R.layout.activity_grid_layout)
+       var a = findViewById<ImageButton>(R.id.imageButton2)
+        var b = findViewById<ImageButton>(R.id.imageButton2)
+        a.setOnClickListener{
+
+        }
+
+    }
+}
