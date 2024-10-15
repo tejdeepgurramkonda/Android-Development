@@ -1,0 +1,173 @@
+### XML CODE
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:columnCount="3"
+    android:rowCount="3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:layout_gravity="center">
+
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="135dp"
+        android:layout_height="200dp"
+        android:layout_row="0"
+        android:layout_column="0"
+        android:scaleType="fitXY"
+        tools:srcCompat="@drawable/img_7" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="135dp"
+        android:layout_height="200dp"
+        android:layout_row="0"
+        android:layout_column="1"
+        android:scaleType="fitXY"
+        tools:srcCompat="@drawable/img_8" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="135dp"
+        android:layout_height="200dp"
+        android:layout_row="0"
+        android:layout_column="2"
+        android:scaleType="fitXY"
+        tools:srcCompat="@drawable/img_9" />
+
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="135dp"
+        android:layout_height="200dp"
+        android:layout_row="1"
+        android:layout_column="0"
+        android:scaleType="fitXY"
+        tools:srcCompat="@drawable/img_10" />
+
+    <ImageButton
+        android:id="@+id/imageButton5"
+        android:layout_width="135dp"
+        android:layout_height="200dp"
+        android:layout_row="1"
+        android:layout_column="1"
+        android:scaleType="fitXY"
+        tools:srcCompat="@drawable/img_11" />
+
+    <ImageButton
+        android:id="@+id/imageButton6"
+        android:layout_width="135dp"
+        android:layout_height="200dp"
+        android:layout_row="1"
+        android:layout_column="2"
+        android:scaleType="fitXY"
+        tools:srcCompat="@drawable/img_12" />
+
+    <ImageButton
+        android:id="@+id/imageButton7"
+        android:layout_width="135dp"
+        android:layout_height="200dp"
+        android:layout_row="2"
+        android:layout_column="0"
+        android:scaleType="fitXY"
+        tools:srcCompat="@drawable/img_13" />
+
+    <ImageButton
+        android:id="@+id/imageButton9"
+        android:layout_width="135dp"
+        android:layout_height="200dp"
+        android:layout_row="2"
+        android:layout_column="1"
+        android:scaleType="fitXY"
+        tools:srcCompat="@drawable/img_14" />
+
+    <ImageButton
+        android:id="@+id/imageButton10"
+        android:layout_width="135dp"
+        android:layout_height="200dp"
+        android:layout_row="2"
+        android:layout_column="2"
+        android:scaleType="fitXY"
+        tools:srcCompat="@drawable/img_15" />
+
+</GridLayout>
+### KOTLIN CODE
+package com.example.myapplication
+
+import android.os.Bundle
+import android.widget.Button
+import android.widget.ImageButton
+import android.widget.Toast
+import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import com.example.myapplication1.R
+import com.google.android.material.snackbar.Snackbar
+
+class MainActivity2 : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
+        setContentView(R.layout.activity_main)
+        val a = findViewById<ImageButton>(R.id.imageButton)
+        val b = findViewById<ImageButton>(R.id.imageButton2)
+        val c = findViewById<ImageButton>(R.id.imageButton3)
+        val d = findViewById<ImageButton>(R.id.imageButton4)
+        val e = findViewById<ImageButton>(R.id.imageButton5)
+        val f = findViewById<ImageButton>(R.id.imageButton6)
+        val g = findViewById<ImageButton>(R.id.imageButton7)
+        val h = findViewById<ImageButton>(R.id.imageButton9)
+        val i = findViewById<ImageButton>(R.id.imageButton10)
+
+
+        a.setOnClickListener { view ->
+            Snackbar.make(view, "Mittal School of Business", Snackbar.LENGTH_LONG).setAction("undo") {
+                Toast.makeText(this, "Successfully Unselected", Toast.LENGTH_LONG).show()
+            }.show()
+        }
+        b.setOnClickListener { view ->
+            Snackbar.make(view, "School of Pharmaceutical Sciences", Snackbar.LENGTH_LONG).setAction("undo") {
+                Toast.makeText(this, "Successfully Unselected", Toast.LENGTH_LONG).show()
+            }.show()
+        }
+        c.setOnClickListener { view ->
+            Snackbar.make(view, "School of Hotel Management and Tourism", Snackbar.LENGTH_LONG).setAction("undo") {
+                Toast.makeText(this, "Successfully Unselected", Toast.LENGTH_LONG).show()
+            }.show()
+        }
+        d.setOnClickListener { view ->
+            Snackbar.make(view, "School of Architecture and Design", Snackbar.LENGTH_LONG).setAction("undo") {
+                Toast.makeText(this, "Successfully Unselected", Toast.LENGTH_LONG).show()
+            }.show()
+        }
+        e.setOnClickListener { view ->
+            Snackbar.make(view, "School of Polytechnic", Snackbar.LENGTH_LONG).setAction("undo") {
+                Toast.makeText(this, "Successfully Unselected", Toast.LENGTH_LONG).show()
+            }.show()
+        }
+        f.setOnClickListener { view ->
+            Snackbar.make(view, "Mittal School of Business", Snackbar.LENGTH_LONG).setAction("undo") {
+                Toast.makeText(this, "Successfully Unselected", Toast.LENGTH_LONG).show()
+            }.show()
+        }
+        g.setOnClickListener { view ->
+            Snackbar.make(view, "Mittal School of Business", Snackbar.LENGTH_LONG).setAction("undo") {
+                Toast.makeText(this, "Successfully Unselected", Toast.LENGTH_LONG).show()
+            }.show()
+        }
+        h.setOnClickListener { view ->
+            Snackbar.make(view, "Mittal School of Business", Snackbar.LENGTH_LONG).setAction("undo") {
+                Toast.makeText(this, "Successfully Unselected", Toast.LENGTH_LONG).show()
+            }.show()
+        }
+        i.setOnClickListener { view ->
+            Snackbar.make(view, "Mittal School of Business", Snackbar.LENGTH_LONG).setAction("undo") {
+                Toast.makeText(this, "Successfully Unselected", Toast.LENGTH_LONG).show()
+            }.show()
+        }
+
+       }}
