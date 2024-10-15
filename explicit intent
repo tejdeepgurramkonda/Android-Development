@@ -1,0 +1,125 @@
+### XML CODE
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button 1" />
+
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button 2" />
+
+    <Button
+        android:id="@+id/btn3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button 3" />
+
+    <Button
+        android:id="@+id/btn4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button 4" />
+
+    <Button
+        android:id="@+id/btn5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button 5" />
+
+    <Button
+        android:id="@+id/btn6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button 6" />
+
+    <Button
+        android:id="@+id/btn7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button 7" />
+</LinearLayout>
+
+### KOTLIN CODE
+package com.example.myapplication1
+
+import android.content.Intent
+import android.net.Uri
+import android.os.Bundle
+import android.provider.CallLog
+import android.provider.ContactsContract
+import android.provider.MediaStore
+import android.widget.Button
+import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+
+class MainActivity2 : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main2)
+
+        // Button 1 opens URL
+        val button1 = findViewById<Button>(R.id.btn)
+        button1.setOnClickListener {
+            val intent1 = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com"))
+            startActivity(intent1)
+        }
+
+        // Button 2 opens another URL
+        val button2 = findViewById<Button>(R.id.btn2)
+        button2.setOnClickListener {
+            val intent2 = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.com"))
+            startActivity(intent2)
+        }
+
+        // Button 3 opens another URL
+        val button3 = findViewById<Button>(R.id.btn3)
+        button3.setOnClickListener {
+            val intent3 = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.github.com"))
+            startActivity(intent3)
+        }
+
+        // Button 4 opens another URL
+        val button4 = findViewById<Button>(R.id.btn4)
+        button4.setOnClickListener {
+            val intent4 = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com"))
+            startActivity(intent4)
+        }
+
+        // Button 5 opens another URL
+        val button5 = findViewById<Button>(R.id.btn5)
+        button5.setOnClickListener {
+            val intent5 = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.twitter.com"))
+            startActivity(intent5)
+        }
+
+        // Button 6 opens another URL
+        val button6 = findViewById<Button>(R.id.btn6)
+        button6.setOnClickListener {
+            val intent6 = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.linkedin.com"))
+            startActivity(intent6)
+        }
+
+        // Button 7 opens another URL
+        val button7 = findViewById<Button>(R.id.btn7)
+        button7.setOnClickListener {
+            val intent7 = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.reddit.com"))
+            startActivity(intent7)
+        }
+    }
+}
